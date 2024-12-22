@@ -13,3 +13,28 @@ Requires PHP: 7.4
 Version: 1.0
 
 */
+
+.logo.logo-theme-main {
+    width: 215px;
+}
+
+ul.footer-contact li a i {
+    padding: 11px;
+    background: #e5e5e580;
+    border-radius: 21px;
+    margin-right: 15px;
+}
+
+ul.footer-contact li {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+ul.footer-contact li a {
+    font-size: 16px;
+}
+
+a.address-icon i {
+    font-size: 13px;
+    padding: 13px 11px !important;
+}
