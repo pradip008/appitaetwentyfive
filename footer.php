@@ -138,7 +138,10 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+<script>
+import { applyFiltersAsync } from '@wordpress/hooks';
 
+</script>
 <?php wp_footer();  ?>
 
 </body>

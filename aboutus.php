@@ -1,5 +1,4 @@
 <?php
-
 /*
 Template name: About Page Template
 */
@@ -7,7 +6,20 @@ Template name: About Page Template
 get_header();
 ?>
 
-
+    <!-- page-title -->
+    <section class="page-title centred">
+        <div class="bg-layer-two" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/page-title.png);"></div>
+        <div class="auto-container">
+            <div class="content-box">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>About Us</li>
+                </ul>
+                <h1>About Us</h1>
+            </div>
+        </div>
+    </section>
+    <!-- page-title end -->
     <!--About Section-->
     <section class="about-section-three">
         <div class="auto-container">
@@ -29,16 +41,16 @@ get_header();
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="about_chart_img">
                         <div class="top-image">
-                            <img src="assets/images/gallery/about-four.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/gallery/about-four.png" alt="">
                         </div>
                         <div class="about-bottom-image">
-                            <img src="assets/images/shape/shape-one.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/shape/shape-one.png" alt="">
                         </div>
                         <div class="about_reveniue_image float-bob-y">
-                            <img src="assets/images/resource/about_revenuie_image_1.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/about_revenuie_image_1.png" alt="">
                         </div>
                         <div class="about_realtime_image float-bob-y">
-                            <img src="assets/images/resource/about_realtime_image_1.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/about_realtime_image_1.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -92,7 +104,7 @@ get_header();
 	<!--Fun Facts Section -->
 
      <!--Services Section-->
-     <section class="services-section two" style="background-image: url(assets/images/background/service-bd-image.png);" >
+     <section class="services-section two" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/service-bd-image.png);" >
     	<div class="auto-container">
         	<!--Sec Title-->
             <div class="sec-title">
@@ -191,16 +203,16 @@ get_header();
         	<div class="carousel-outer">
                 <!--Sponsors Slider-->
                 <ul class="sponsors-carousel-two owl-carousel owl-theme">
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-01.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-02.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-03.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-04.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-05.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-01.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-02.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-03.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-04.png" alt=""></a></div></li>
-                    <li><div class="image-box"><a href="#"><img src="assets/images/clients/clints-05.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-01.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-02.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-03.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-04.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-05.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-01.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-02.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-03.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-04.png" alt=""></a></div></li>
+                    <li><div class="image-box"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/clients/clints-05.png" alt=""></a></div></li>
                 </ul>
             </div>
     	</div>
@@ -221,7 +233,7 @@ get_header();
                         <div class="inner-box">
                             <figure class="image-box">
                                 <a href="team-details.html">
-                                    <img src="assets/images/team/team_01.png" alt="">
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/team/team_01.png" alt="">
                                 </a>
                             </figure>
                             <div class="lower-content">
@@ -243,7 +255,7 @@ get_header();
                         <div class="inner-box">
                             <figure class="image-box">
                                 <a href="team-details.html">
-                                    <img src="assets/images/team/team_02.png" alt="">
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/team/team_02.png" alt="">
                                 </a>
                             </figure>
                             <div class="lower-content">
@@ -265,7 +277,7 @@ get_header();
                         <div class="inner-box">
                             <figure class="image-box">
                                 <a href="team-details.html">
-                                    <img src="assets/images/team/team_03.png" alt="">
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/team/team_03.png" alt="">
                                 </a>
                             </figure>
                             <div class="lower-content">
@@ -295,10 +307,10 @@ get_header();
                 <div class="column col-lg-6 col-md-6 col-sm-12 mb-20">
                     <div class="faq-image">
                         <div class="faq-one float-bob-y">
-                            <img src="assets/images/resource/faq-chart-image.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/faq-chart-image.png" alt="">
                         </div>
                         <div class="faq-two">
-                            <img src="assets/images/shape/shape-one.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/shape/shape-one.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -340,7 +352,7 @@ get_header();
     <!--End Faq Section-->
 
    <!-- testimonial-section -->
-   <section class="testimonial-section" style="background-image: url(assets/images/background/service-bd-image.png);">
+   <section class="testimonial-section" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/service-bd-image.png);">
     <div class="auto-container">
         <div class="row clearfix">
             <div class="col-lg-5 col-md-6 col-sm-12 testimonial_left_column">
@@ -372,7 +384,7 @@ get_header();
                                         <li><i class="icon-22"></i></li>
                                     </ul>
                                     <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.png" alt=""></figure>
+                                    <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png" alt=""></figure>
                                 </div>
                                 <div class="author-box">
                                     <h3>Floyd Miles</h3>
@@ -391,7 +403,7 @@ get_header();
                                         <li><i class="icon-22"></i></li>
                                     </ul>
                                     <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img src="assets/images/resource/testimonial-2.png" alt=""></figure>
+                                    <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png" alt=""></figure>
                                 </div>
                                 <div class="author-box">
                                     <h3>Cody Fisher</h3>
@@ -410,7 +422,7 @@ get_header();
                                         <li><i class="icon-22"></i></li>
                                     </ul>
                                     <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.png" alt=""></figure>
+                                    <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png" alt=""></figure>
                                 </div>
                                 <div class="author-box">
                                     <h3>Courtney Henry</h3>
@@ -429,7 +441,7 @@ get_header();
                                         <li><i class="icon-22"></i></li>
                                     </ul>
                                     <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img src="assets/images/resource/testimonial-2.png" alt=""></figure>
+                                    <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png" alt=""></figure>
                                 </div>
                                 <div class="author-box">
                                     <h3>Cody Fisher</h3>
@@ -442,12 +454,12 @@ get_header();
             </div>
         </div>
     </div>
-</section>
-<!-- testimonial-section end -->
+   </section>
+    <!-- testimonial-section end -->
 
     <!-- Cta Section Start-->
     <section class="cta-section-two">
-        <div class="cta-2-bg" style="background-image: url(assets/images/background/cta_bg_image.png);"></div>
+        <div class="cta-2-bg" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta_bg_image.png);"></div>
         <div class="auto-container">
             <div class="section_heading text-center">
                 <h2 class="section_heading_title_big">Ready to get started? <br> 2M+ businesses already joined</h2>
