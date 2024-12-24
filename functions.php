@@ -60,6 +60,7 @@ add_action( 'wp_enqueue_scripts', 'appitae_twentyfive_enqueue_styles' );
 
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/menus.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/customizer.php';
+require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/custom-post-type.php';
 
 // Add theme support for various features
 function appitae_twentyfive_theme_setup() {

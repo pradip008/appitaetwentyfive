@@ -13,9 +13,9 @@ get_header();
             <div class="content-box">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
-                    <li>Services1</li>
+                    <li>Services</li>
                 </ul>
-                <h1>Our Services 1</h1>
+                <h1>Our Services</h1>
             </div>
         </div>
     </section>
@@ -25,135 +25,121 @@ get_header();
     <section class="services-section" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/service-bd-image.png);">
     	<div class="auto-container">
         	<!--Sec Title-->
+            <?php
+        $service_sub_title_ = get_field('service_sub_title_');
+        $service_title_ = get_field('service_title_');
+        $service_description= get_field('service_description');
+       
+        ?>
             <div class="sec-title">
-                <div class="subtitle">EXPLORE POSSIBILITIES</div>
-            	<h2 class="heading_title">The complete solutions</h2>
-                <div class="text">Until recently, the prevailing view assumed lorem ipsum was born as a <br> nonsense text. It's not Latin though it looks like nothing.</div>
+                <div class="subtitle"><?php echo $service_sub_title_; ?></div>
+            	<h2 class="heading_title"><?php echo $service_title_; ?></h2>
+                <div class="text"><?php echo $service_description; ?></div>
             </div>
-            
-            <div class="row clearfix">
-            	<!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-6"></span>
-                        </div>
-                        <h3><a href="service-details.html">Real-Time Analytics</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
-                    </div>
-            	</div>
+            <?php
+// Query "Our Services" posts
+$args = array(
+    'post_type'      => 'our-services', // Custom post type slug
+    'posts_per_page' => -1,             // Retrieve all posts
+    'post_status'    => 'publish',      // Only published posts
+    'orderby'        => 'date',         // Order by date
+    'order'          => 'ASC',         // Descending order
+);
 
-                <!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-7"></span>
-                        </div>
-                        <h3><a href="service-details.html">Digital Marketing</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
-                    </div>
-            	</div>
+$services_query = new WP_Query($args);
 
-                <!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-8"></span>
-                        </div>
-                        <h3><a href="service-details.html">Market Research</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
-                    </div>
-            	</div>
+if ($services_query->have_posts()) :
+    echo '<div class="row clearfix">';
+    while ($services_query->have_posts()) : $services_query->the_post(); ?>
 
-                <!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-9"></span>
-                        </div>
-                        <h3><a href="service-details.html">Brand Design Identity</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
+            <div class="service-style-one col-md-4 col-sm-6 col-xs-12">
+ 
+            <div class="inner-box service-four wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="icon-box">
+                        <!-- <span class="icon icon-6"></span> -->
+                        <img src='<?php echo get_field('service_image_:_home'); ?>' class='home-service-icon'/>
                     </div>
-            	</div>
-
-                <!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-10"></span>
-                        </div>
-                        <h3><a href="service-details.html">Expenses Management</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
-                    </div>
-            	</div>
-
-                <!--Service Style One-->
-            	<div class="service-style-one col-md-4 col-sm-6 col-xs-12">
-            		<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="icon-box">
-                        	<span class="icon icon-11"></span>
-                        </div>
-                        <h3><a href="service-details.html">Data Integration</a></h3>
-                        <div class="text">With our AI your the can makes the never before seen images fores New</div>
-                        <a href="service-details.html" class="read-more">Learn more<span class="icon icon-38"></span></a>
-                    </div>
-            	</div>
+                    <?php
+                    $excerpt = get_the_excerpt(); // Get the raw excerpt
+                    $excerpt = mb_substr($excerpt, 0, 70) . '...'; // Limit to 100 characters
+                   
+                    ?>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <div class="text"><?php  echo $excerpt; // Display excerpt ?></div>
+                    <a href="<?php the_permalink(); ?>" class="read-more ">Learn more<span class="icon icon-38"></span></a>
             </div>
+        </div>
+
+    <?php endwhile;
+    echo '</div>';
+else :
+    echo '<p>No services found.</p>';
+endif;
+
+// Reset Post Data
+wp_reset_postdata();
+?>
         </div>
     </section>
     <!--End We Do Section-->
 
     <!--Fun Facts Section -->
-    <section class="fun-facts-section-three">
-    	<div class="auto-container">
+    <section class="fun-facts-section-four">
+        <div class="auto-container">
             <div class="row clearfix">
-            	<!--Column-->
-                <div class="column count-box col-lg-4 col-md-6 col-sm-12">
+                <!--Column-->
+                <div class="column count-box col-lg-3 col-md-6 col-sm-12">
                     <div class="inner">
                         <div class="content">
-                            <div class="count-outer">
-                                <span class="count-text" data-speed="2000" data-stop="85">0</span>%
+                            <div class="count-outer-two">
+                                <span class="count-text" data-speed="2000" data-stop="<?php echo get_field('counter_1_value'); ?>">0</span>+
                             </div>
-                            <div class="counter-title">Increase in customer <br> engagement</div>
+                            <div class="counter-title-two"><?php echo get_field('counter_1_name'); ?></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!--Column-->
-                <div class="column count-box col-lg-4 col-md-6 col-sm-12">
+                <div class="column count-box col-lg-3 col-md-6 col-sm-12">
                     <div class="inner">
                         <div class="content">
-                            <div class="count-outer">
-                                <span class="count-text" data-speed="3000" data-stop="70">0</span>%
+                            <div class="count-outer-two">
+                                <span class="count-text" data-speed="3000" data-stop="<?php echo get_field('counter_2_value'); ?>">0</span>+
                             </div>
-                            <div class="counter-title">Improvement in client <br> satisfaction</div>
+                            <div class="counter-title-two"><?php echo get_field('counter_2_name2'); ?></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!--Column-->
-                <div class="column count-box col-lg-4 col-md-6 col-sm-12">
+                <div class="column count-box col-lg-3 col-md-6 col-sm-12">
                     <div class="inner">
                         <div class="content">
-                            <div class="count-outer">
-                                <span class="count-text" data-speed="2500" data-stop="90">0</span>%
+                            <div class="count-outer-two">
+                                <span class="count-text" data-speed="2500" data-stop="<?php echo get_field('counter_3_value'); ?>">0</span>+
                             </div>
-                            <div class="counter-title">Increase in conversion <br> rates</div>
+                            <div class="counter-title-two"><?php echo get_field('counter_3_name'); ?></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Column-->
+                <div class="column count-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner">
+                        <div class="content">
+                            <div class="count-outer-two">
+                                <span class="count-text" data-speed="2500" data-stop="<?php echo get_field('counter_4_value'); ?>">0</span>+
+                            </div>
+                            <div class="counter-title-two"><?php echo get_field('counter_4_name_'); ?></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-	<!--Fun Facts Section -->
+    <!--Fun Facts Section -->
 
      <!-- pricing-one -->
-     <section class="pricing-section text-center">
+     <!-- <section class="pricing-section text-center">
         <div class="auto-container">
             <div class="sec-title">
                 <div class="subtitle">General Faq’s</div>
@@ -298,7 +284,7 @@ get_header();
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- pricing-one end -->
 
     <!-- testimonial-section -->
