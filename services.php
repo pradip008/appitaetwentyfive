@@ -12,7 +12,7 @@ get_header();
         <div class="auto-container">
             <div class="content-box">
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
                     <li>Services</li>
                 </ul>
                 <h1>Our Services</h1>
@@ -290,183 +290,74 @@ wp_reset_postdata();
     <!-- testimonial-section -->
     <section class="testimonial-section" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/service-bd-image.png);">
         <div class="auto-container">
+            <?php
+            $testimonials = get_field('testimonail_page_:_service');
+            if( $testimonials): 
+            ?>
             <div class="sec-title text-center"> 
-                <div class="subtitle">Testimonials</div>
-            	<h2 class="heading_title">Customers success stories</h2>
-                <div class="text">Until recently, the prevailing view assumed lorem ipsum was born as a <br> nonsense text. It's not Latin though it looks like nothing.</div>
+                <div class="subtitle"><?php echo esc_attr( $testimonials['testimonial_sub_title_for_service_page'] ); ?></div>
+            	<h2 class="heading_title"><?php echo esc_attr( $testimonials['testimonial_title_for_service_page'] ); ?></h2>
+                <div class="text"><?php echo  $testimonials['testimonial_description_for_service_page']; ?></div>
             </div>
+            <?php endif; ?>
             <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Floyd Miles</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Cody Fisher</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-3.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Courtney Henry</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Floyd Miles</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Cody Fisher</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-3.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Courtney Henry</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Floyd Miles</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Cody Fisher</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block-one">
-                    <div class="inner-box">
-                        <div class="text-box">
-                            <ul class="rating clearfix">
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                                <li><i class="icon-22"></i></li>
-                            </ul>
-                            <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                            <figure class="thumb-box"><img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-3.png" alt=""></figure>
-                        </div>
-                        <div class="author-box">
-                            <h3>Courtney Henry</h3>
-                            <span class="designation">UI Designer</span>
-                        </div>
-                    </div>
-                </div>
+            <?php
+                function get_testimonials_with_designation() {
+                    $args = array(
+                        'post_type'      => 'testimonial',
+                        'posts_per_page' => -1, // Fetch all testimonials
+                        'post_status'    => 'publish',
+                    );
+                
+                    $testimonials = new WP_Query($args);
+                
+                    if ($testimonials->have_posts()) {
+                       
+                        while ($testimonials->have_posts()) {
+                         
+                            $testimonials->the_post();
+                
+                            $testimonial_id = get_the_ID();
+                            $title = get_the_title();
+                            $content = get_the_content();
+                            $designation = get_post_meta($testimonial_id, 'designation', true); // Fetch custom field
+                            $featured_image_url = get_the_post_thumbnail_url($testimonial_id, 'full');
+                
+                            echo '<div class="swiper-slide testimonial-block-one">';
+                            echo '<div class="inner-box">';
+                            echo '<div class="text-box">';
+                            echo '  <ul class="rating clearfix">
+                                        <li><i class="icon-22"></i></li>
+                                        <li><i class="icon-22"></i></li>
+                                        <li><i class="icon-22"></i></li>
+                                        <li><i class="icon-22"></i></li>
+                                        <li><i class="icon-22"></i></li>
+                                    </ul>';
+                            echo '<p>' . esc_html($content) . '</p>';   
+                            echo ' <figure class="thumb-box"><img
+                            src="'. esc_html($featured_image_url) .'"
+                            alt=""></figure>';     
+
+                            echo '</div>';
+                            echo '<div class="author-box">';
+                            echo '<h3>' . esc_html($title) . '</h3>';
+                            echo '<span class="designation">' . esc_html($designation) . '</span>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                      
+                
+                        wp_reset_postdata(); // Reset post data after the loop
+                    } else {
+                        echo '<p>No testimonials found.</p>';
+                    }
+                }
+                
+                
+                ?>
+            <?php get_testimonials_with_designation(); ?>
+            
             </div>
         </div>
     </section>

@@ -39,7 +39,9 @@ function appitae_twentyfive_enqueue_styles() {
   wp_enqueue_style( 'responsive-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/responsive.css', array(), '5.3.45' ,'all');
   wp_enqueue_style( 'page-title-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/page-title.css', array(), '5.3.47' ,'all');
   wp_enqueue_style( 'team-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/team.css', array(), '5.3.48' ,'all');
-
+  //portfolio 
+  wp_enqueue_style( 'gallery-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/gallery.css', array(), '5.3.49' ,'all');
+ 
   // all script enqueue code 
   wp_enqueue_script( 'jquery-min', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/jquery.js','[]','1.18.0', true );
   wp_enqueue_script( 'bootstrap-min', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/bootstrap.min.js', array(), '1.1.0', true );
@@ -48,7 +50,11 @@ function appitae_twentyfive_enqueue_styles() {
   //contact form js start 
   wp_enqueue_script( 'validation-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/validation.js', array(), '1.4.0', true );
   //contact form js end
-  wp_enqueue_script( 'appear-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/appear.js', array(), '1.4.0', true );
+  wp_enqueue_script( 'appear-js', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/appear.js', array(), '1.4.0', true );
+  //porrtfolio
+  if (is_page_template('portfolio.php')) {
+  wp_enqueue_script( 'isotope-js', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/isotope.js', array(), '1.4.15', true );
+  }
   wp_enqueue_script( 'owl-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/owl.js', array(), '1.5.0', true );
   wp_enqueue_script( 'wow-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/wow.js', array(), '1.6.0', true );
   wp_enqueue_script( 'swiper-min', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/swiper.min.js', array(), '1.7.0', true );

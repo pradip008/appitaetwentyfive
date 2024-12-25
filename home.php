@@ -76,12 +76,13 @@ get_header();
         <?php
     // End loop.
     endwhile;
-// No value.
-else :
-    // Do something...
-endif;
-?>
-    </div>
+ // No value.
+        else :
+            // Do something...
+        endif;
+        ?>
+  </div>
+
 </section>
 <!-- banner-section end -->
 
@@ -125,10 +126,10 @@ endif;
 <!--End client Two Section-->
 
 <!--About Section-->
-<?php
-$hero = get_field('about_us');
-if( $hero ): 
-?>
+    <?php
+    $hero = get_field('about_us');
+    if( $hero ): 
+    ?>
 <section class="about-section-four">
     <div class="auto-container">
         <div class="row clearfix">
@@ -167,7 +168,7 @@ if( $hero ):
         </div>
     </div>
 </section>
-<?php endif; ?>
+    <?php endif; ?>
 <!--End About Section-->
 
 <!--Services Section-->
@@ -193,49 +194,49 @@ if( $hero ):
         </div>
         <?php endif; ?>
         <?php
-// Query "Our Services" posts
-$args = array(
-    'post_type'      => 'our-services', // Custom post type slug
-    'posts_per_page' => -1,             // Retrieve all posts
-    'post_status'    => 'publish',      // Only published posts
-    'orderby'        => 'date',         // Order by date
-    'order'          => 'ASC',         // Descending order
-);
+  // Query "Our Services" posts
+        $args = array(
+        'post_type'      => 'our-services', // Custom post type slug
+        'posts_per_page' => -1,             // Retrieve all posts
+        'post_status'    => 'publish',      // Only published posts
+        'orderby'        => 'date',         // Order by date
+        'order'          => 'ASC',         // Descending order
+        );
 
-$services_query = new WP_Query($args);
+        $services_query = new WP_Query($args);
 
-if ($services_query->have_posts()) :
-    echo '<div class="row clearfix">';
-    while ($services_query->have_posts()) : $services_query->the_post(); ?>
+        if ($services_query->have_posts()) :
+        echo '<div class="row clearfix">';
+        while ($services_query->have_posts()) : $services_query->the_post(); ?>
 
-            <div class="service-style-one col-md-3 col-sm-6 col-xs-12">
- 
-            <div class="inner-box service-four wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="icon-box">
-                        <!-- <span class="icon icon-6"></span> -->
-                        <img src='<?php echo get_field('service_image_:_home'); ?>' class='home-service-icon'/>
-                    </div>
-                    <?php
-                    $excerpt = get_the_excerpt(); // Get the raw excerpt
-                    $excerpt = mb_substr($excerpt, 0, 50) . '...'; // Limit to 100 characters
-                   
-                    ?>
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <div class="text"><?php  echo $excerpt; // Display excerpt ?></div>
-                    <a href="<?php the_permalink(); ?>" class="read-more ">Learn more<span class="icon icon-38"></span></a>
+                <div class="service-style-one col-md-3 col-sm-6 col-xs-12">
+
+                <div class="inner-box service-four wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="icon-box">
+                            <!-- <span class="icon icon-6"></span> -->
+                            <img src='<?php echo get_field('service_image_:_home'); ?>' class='home-service-icon'/>
+                        </div>
+                        <?php
+                        $excerpt = get_the_excerpt(); // Get the raw excerpt
+                        $excerpt = mb_substr($excerpt, 0, 50) . '...'; // Limit to 100 characters
+                        
+                        ?>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="text"><?php  echo $excerpt; // Display excerpt ?></div>
+                        <a href="<?php the_permalink(); ?>" class="read-more ">Learn more<span class="icon icon-38"></span></a>
+                </div>
             </div>
-        </div>
 
-    <?php endwhile;
-    echo '</div>';
-else :
-    echo '<p>No services found.</p>';
-endif;
+        <?php endwhile;
+        echo '</div>';
+        else :
+        echo '<p>No services found.</p>';
+        endif;
 
-// Reset Post Data
-wp_reset_postdata();
-?>
-    </div>
+        // Reset Post Data
+        wp_reset_postdata();
+        ?>
+ </div>
 </section>
 <!--End We Do Section-->
 
@@ -300,30 +301,37 @@ wp_reset_postdata();
         <div class="row clearfix">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="title-content">
-                    <div class="subtitle">Expense Solutions</div>
-                    <h2 class="heading_title">Get Secure & Convenient Transaction</h2>
-                    <div class="text">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense
-                        text. It's not Latin though it looks like nothing.</div>
+                    <div class="subtitle"><?php echo get_field('wc_sub_title_'); ?></div>
+                    <h2 class="heading_title"><?php echo get_field('wc_title_'); ?></h2>
+                    <div class="text"></div>
                     <div class="list-item">
                         <ul class="list-one">
-                            <li><span class="icon icon-5"></span>Market Analysis</li>
-                            <li><span class="icon icon-5"></span>Business Profit</li>
+                            <li><span class="icon icon-5"></span><?php echo get_field('wc_point_1'); ?></li>
+                            <li><span class="icon icon-5"></span><?php echo get_field('wc_point_2'); ?></li>
                         </ul>
                         <ul class="list-two">
-                            <li><span class="icon icon-5"></span>Client Alliance</li>
-                            <li><span class="icon icon-5"></span>Cash Withdrawal</li>
+                            <li><span class="icon icon-5"></span><?php echo get_field('wc_point_3'); ?></li>
+                            <li><span class="icon icon-5"></span><?php echo get_field('wc_point_4'); ?></li>
                         </ul>
                     </div>
                     <div class="start_trils_btn">
-                        <a href="index.html" class="theme-btn btn-four">Get Start Now</a>
+                        <a href="<?php echo get_field('wc_button_url'); ?>" class="theme-btn btn-four"><?php echo get_field('wc_button_text'); ?></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="customer_img_content">
                     <div class="customer_top-image">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/custom_image_one.png"
+                        <?php 
+                        if(get_field('wc_main_image')){
+                        ?>
+                        <img src="<?php echo get_field('wc_main_image'); ?>"
                             alt="">
+                         <?php } else{ ?>
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/custom_image_one.png"
+                            alt="">
+                        <?php }
+                         ?>   
                     </div>
                     <div class="customer_bottom-image">
                         <img src="<?php bloginfo('template_directory'); ?>/assets/images/shape/shape-one.png" alt="">
@@ -331,13 +339,13 @@ wp_reset_postdata();
                 </div>
                 <div class="progress_bar_two float-bob-y">
                     <div class="visitor_one">
-                        <h4>1,235</h4>
-                        <p>Visitors this month</p>
+                        <h4><?php echo get_field('wc_count_value'); ?></h4>
+                        <p><?php echo get_field('wc_count_name_'); ?></p>
                         <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/check_up_icon.png"
                             alt="">
                     </div>
                     <div class="progress-two">
-                        <div class="circular-progress" data-inner-circle-color="white" data-percentage="85"
+                        <div class="circular-progress" data-inner-circle-color="white" data-percentage="<?php echo get_field('wc_count_percentage');?>"
                             data-progress-color="rgba(104, 47, 255, 1)" data-bg-color="rgba(240, 232, 243, 1)">
                             <div class="inner-circle"></div>
                             <p class="percentage">0%</p>
@@ -357,29 +365,45 @@ wp_reset_postdata();
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="business-impact-img">
                     <div class="image_one">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/business_impact_image.png"
+                        <?php 
+                        if(get_field('main_image')){
+                        ?>
+                        <img src="<?php echo get_field('main_image'); ?>"
                             alt="">
+                         <?php } else{ ?>
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/business_impact_image.png"
+                            alt="">
+                        <?php }
+                         ?> 
+                       
                     </div>
                     <div class="image_two">
                         <img src="<?php bloginfo('template_directory'); ?>/assets/images/shape/shape-one.png" alt="">
                     </div>
                     <div class="image_three float-bob-y">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/progress_bar_image.png"
+                    <?php 
+                        if(get_field('second_image')){
+                        ?>
+                        <img src="<?php echo get_field('second_image'); ?>"
                             alt="">
+                         <?php } else{ ?>
+                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/progress_bar_image.png"
+                            alt="">
+                        <?php }
+                         ?> 
+                       
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="business-title-content">
-                    <div class="subtitle">Business Impact</div>
-                    <h2 class="heading_title">Strong & ambitious vision to evaluate your business</h2>
-                    <div class="text">Elit est neque posuere in. Augue at lacinia bibendum commodo mauris. Auctor eu
-                        consectetur commodo nulla ullamcorper sem in ac arcu. Id vitae ullamcorper vestibulum vestibulum
-                        tempor.</div>
-                    <div class="text">Morbi nulla proin enim pellentesque aenean amet tellus tristique sed. Quam id quam
-                        non ultricies velit sem.</div>
+                    <div class="subtitle"><?php echo get_field('sub_title_'); ?></div>
+                    <h2 class="heading_title"><?php echo get_field('title_'); ?></h2>
+                    <div class="text"><?php echo get_field('description'); ?></div>
+                    
+                   
                     <div class="start_trils_btn">
-                        <a href="index.html" class="theme-btn btn-four">Get Start Now</a>
+                        <a href="<?php echo get_field('button_url'); ?>" class="theme-btn btn-four"><?php echo get_field('button_text_'); ?></a>
                     </div>
                 </div>
             </div>
@@ -388,170 +412,22 @@ wp_reset_postdata();
 </section>
 <!--End Social Impact Section-->
 
-<!-- pricing-one -->
-<!-- <section class="pricing-section text-center">
-    <div class="auto-container">
-        <div class="sec-title">
-            <div class="subtitle">Pricing Table</div>
-            <h2 class="heading_title">Simple, flexible pricing</h2>
-        </div>
-        <div class="tabs-box">
-            <div class="tab-btn-box p_relative d_block">
-                <ul class="tab-btns tab-buttons clearfix p_relative">
-                    <li class="tab-btn active-btn" data-tab="#tab-1">Monthly</li>
-                    <li class="tab-btn" data-tab="#tab-2">Yearly</li>
-                </ul>
-            </div>
-            <div class="tabs-content">
-                <div class="tab active-tab" id="tab-1">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Starter plan</h6>
-                                    <h2>$19.00</h2>
-                                    <p>Per Month</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list one">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-13"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-13"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn">Start Free Trial</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Basic plan</h6>
-                                    <h2>$39.00</h2>
-                                    <p>Per Month</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list two">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-12"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-13"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn two">Start Free Trial</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Advanced Pack</h6>
-                                    <h2>$59.50</h2>
-                                    <p>Per Month</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list three">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-12"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-12"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn">Start Free Trial</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab" id="tab-2">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Starter plan</h6>
-                                    <h2>$19.00</h2>
-                                    <p>Yearly</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list one">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-13"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-13"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn">Start Free Trial</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Basic plan</h6>
-                                    <h2>$39.00</h2>
-                                    <p>Yearly</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list two">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-12"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-13"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn two">Start Free Trial</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="price__content p_relative">
-                                <div class="price__text p_relative">
-                                    <h6>Advanced Pack</h6>
-                                    <h2>$59.50</h2>
-                                    <p>Yearly</p>
-                                </div>
-                                <p>For individuals and small teams trying out for an unlimited period.</p>
-                                <div class="price__list three">
-                                    <ul>
-                                        <li><span class="icon icon-12"></span> 2 free projects</li>
-                                        <li><span class="icon icon-12"></span> 1 GB of cloud storage</li>
-                                        <li><span class="icon icon-12"></span> For personal use</li>
-                                        <li><span class="icon icon-12"></span> Weekly data backup</li>
-                                        <li><span class="icon icon-12"></span> 12/5 email support</li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="price__btn">Start Free Trial</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pricing-table-imgae">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/resource/pricing_table_image.png" alt="">
-        </div>
-    </div>
-</section> -->
-<!-- pricing-one end -->
-
 <!-- testimonial-section -->
 <section class="testimonial-section"
     style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/service-bd-image.png);">
     <div class="auto-container">
         <div class="row clearfix">
             <div class="col-lg-5 col-md-6 col-sm-12 testimonial_left_column">
+                <?php
+                $testimonials = get_field('testimonials');
+                if( $testimonials): 
+                ?>
                 <div class="sec-title">
-                    <div class="subtitle">Testimonials</div>
-                    <h2 class="heading_title">Users share their experiences with sasen</h2>
-                    <div class="text">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense
-                        text</div>
+                    <div class="subtitle"><?php echo esc_attr( $testimonials['testimonial_sub_title'] ); ?></div>
+                    <h2 class="heading_title"><?php echo esc_attr( $testimonials['testimonial_title_'] ); ?></h2>
+                    <div class="text"><?php echo esc_attr( $testimonials['testimonial_description'] ); ?></div>
                 </div>
+                <?php endif;?>
                 <div class="slider-nav-style-2 testimonial-1-nav">
                     <div class="slider-control slider-button-prev">
                         <span><i class="icon-31"></i></span>
@@ -562,96 +438,64 @@ wp_reset_postdata();
                 </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <div class="swiper-container two-item-carousel">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide testimonial-block-one">
-                            <div class="inner-box">
-                                <div class="text-box">
-                                    <ul class="rating clearfix">
+            <div class="swiper-container two-item-carousel">
+                <?php
+                function get_testimonials_with_designation() {
+                    $args = array(
+                        'post_type'      => 'testimonial',
+                        'posts_per_page' => -1, // Fetch all testimonials
+                        'post_status'    => 'publish',
+                    );
+                
+                    $testimonials = new WP_Query($args);
+                
+                    if ($testimonials->have_posts()) {
+                        echo '<div class="swiper-wrapper">';
+                        while ($testimonials->have_posts()) {
+                         
+                            $testimonials->the_post();
+                
+                            $testimonial_id = get_the_ID();
+                            $title = get_the_title();
+                            $content = get_the_content();
+                            $designation = get_post_meta($testimonial_id, 'designation', true); // Fetch custom field
+                            $featured_image_url = get_the_post_thumbnail_url($testimonial_id, 'full');
+                
+                            echo '<div class="swiper-slide testimonial-block-one">';
+                            echo '<div class="inner-box">';
+                            echo '<div class="text-box">';
+                            echo '  <ul class="rating clearfix">
                                         <li><i class="icon-22"></i></li>
                                         <li><i class="icon-22"></i></li>
                                         <li><i class="icon-22"></i></li>
                                         <li><i class="icon-22"></i></li>
                                         <li><i class="icon-22"></i></li>
-                                    </ul>
-                                    <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra
-                                        massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img
-                                            src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png"
-                                            alt=""></figure>
-                                </div>
-                                <div class="author-box">
-                                    <h3>Floyd Miles</h3>
-                                    <span class="designation">UI Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial-block-one">
-                            <div class="inner-box">
-                                <div class="text-box">
-                                    <ul class="rating clearfix">
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                    </ul>
-                                    <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra
-                                        massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img
-                                            src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png"
-                                            alt=""></figure>
-                                </div>
-                                <div class="author-box">
-                                    <h3>Cody Fisher</h3>
-                                    <span class="designation">UI Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial-block-one">
-                            <div class="inner-box">
-                                <div class="text-box">
-                                    <ul class="rating clearfix">
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                    </ul>
-                                    <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra
-                                        massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img
-                                            src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-1.png"
-                                            alt=""></figure>
-                                </div>
-                                <div class="author-box">
-                                    <h3>Courtney Henry</h3>
-                                    <span class="designation">UI Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide testimonial-block-one">
-                            <div class="inner-box">
-                                <div class="text-box">
-                                    <ul class="rating clearfix">
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                        <li><i class="icon-22"></i></li>
-                                    </ul>
-                                    <p>“Suspendisse est imperdiet pellentesque nulla vulputate eu pharetra pharetra
-                                        massa amet ac semper et pellentesque dolor tincidunt sodales”</p>
-                                    <figure class="thumb-box"><img
-                                            src="<?php bloginfo('template_directory'); ?>/assets/images/resource/testimonial-2.png"
-                                            alt=""></figure>
-                                </div>
-                                <div class="author-box">
-                                    <h3>Cody Fisher</h3>
-                                    <span class="designation">UI Designer</span>
-                                </div>
-                            </div>
-                        </div>
+                                    </ul>';
+                            echo '<p>' . esc_html($content) . '</p>';   
+                            echo ' <figure class="thumb-box"><img
+                            src="'. esc_html($featured_image_url) .'"
+                            alt=""></figure>';     
+
+                            echo '</div>';
+                            echo '<div class="author-box">';
+                            echo '<h3>' . esc_html($title) . '</h3>';
+                            echo '<span class="designation">' . esc_html($designation) . '</span>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        echo '</div>';
+                
+                        wp_reset_postdata(); // Reset post data after the loop
+                    } else {
+                        echo '<p>No testimonials found.</p>';
+                    }
+                }
+                
+                
+                ?>
+                <?php get_testimonials_with_designation(); ?>
+               
                     </div>
                 </div>
             </div>
@@ -662,60 +506,58 @@ wp_reset_postdata();
 
 <!--Faq Section-->
 <section class="faq-section">
-    <div class="medium-container">
+    <div class="container">
         <div class="row clearfix">
             <!--Counter Column-->
             <div class="column col-lg-12 col-md-12 col-sm-12">
+                <?php
+                $faqs = get_field('faqs_section');
+                if( $faqs): 
+                ?>
                 <div class="sec-title text-center">
-                    <div class="subtitle">General Faq’s</div>
-                    <h2 class="heading_title">Frequently asked questions <br> from clients</h2>
-                    <div class="text">Enim orci aliquam malesuada porttitor feugiat tellus malesuada quis <br> fermentum
-                        mattis sit fringilla id feugiat velit non sed id. Turpis <br> pellentesque proin viverra eget
-                        ultrices.</div>
+                    <div class="subtitle"><?php echo esc_attr( $faqs['faqs_sub_title'] ); ?></div>
+                    <h2 class="heading_title"><?php echo $faqs['faqs_title']; ?></h2>
+                    <div class="text"><?php echo esc_attr( $faqs['faqs_description'] ); ?></div>
                 </div>
+                <?php endif; ?>
                 <!--Accordion Box-->
-                <div class="accordion-box style-two">
-                    <!-- Accordion -->
-                    <div class="accordion accordion-block">
-                        <div class="accord-btn active">
-                            <h4>Is there a free trial available?</h4>
-                        </div>
-                        <div class="accord-content collapsed">
-                            <p>AI isn't here to replace human creativity but it can amplify it and take it even further.
-                                So whether you're creating fanart of your favorite anime. Effortlessly creates.</p>
-                        </div>
+
+                <?php
+                    // Query FAQs
+                    $args = array(
+                    'post_type'      => 'faq', // Custom post type name
+                    'posts_per_page' => -1,    // Fetch all FAQs
+                    'order'          => 'ASC', // Order FAQs (e.g., alphabetically or by publish date)
+                    'orderby'        => 'date' // Order by title
+                    );
+
+                    $faq_query = new WP_Query($args);
+
+                    if ($faq_query->have_posts()) : ?>
+                   
+                        
+                         <div class="accordion-box style-two">
+                            <?php while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
+
+                                <div class="accordion accordion-block">
+                                    <div class="accord-btn">
+                                        <h4><?php the_title(); ?></h4>
+                                    </div>
+                                    <div class="accord-content ">
+                                        <p><?php the_content(); ?></p>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                       
                     </div>
-                    <!-- Accordion -->
-                    <div class="accordion accordion-block">
-                        <div class="accord-btn">
-                            <h4>What is the cost of this platform?</h4>
-                        </div>
-                        <div class="accord-content">
-                            <p>AI isn't here to replace human creativity but it can amplify it and take it even further.
-                                So whether you're creating fanart of your favorite anime. Effortlessly creates.</p>
-                        </div>
-                    </div>
-                    <!-- Accordion -->
-                    <div class="accordion accordion-block">
-                        <div class="accord-btn">
-                            <h4>Can other info be added to an invoice?</h4>
-                        </div>
-                        <div class="accord-content">
-                            <p>AI isn't here to replace human creativity but it can amplify it and take it even further.
-                                So whether you're creating fanart of your favorite anime. Effortlessly creates.</p>
-                        </div>
-                    </div>
-                    <!-- Accordion -->
-                    <div class="accordion accordion-block">
-                        <div class="accord-btn">
-                            <h4>What is your cancellation policy?</h4>
-                        </div>
-                        <div class="accord-content">
-                            <p>AI isn't here to replace human creativity but it can amplify it and take it even further.
-                                So whether you're creating fanart of your favorite anime. Effortlessly creates.</p>
-                        </div>
-                    </div>
-                </div>
+                    <?php 
+                    else :
+                    echo '<p>No FAQs found.</p>';
+                    endif;
+
+                    // Reset post data
+                    wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>
@@ -727,12 +569,17 @@ wp_reset_postdata();
     <div class="cta-1-bg" data-parallax='{"y": 30}'
         style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
     </div>
+    <?php
+    $cta_title = get_field('cta_title');
+    $cta_button_text = get_field('cta_button_text');
+    $cta_button_url = get_field('cta_button_url');
+    ?>
     <div class="auto-container">
         <div class="section_heading text-center">
-            <h2 class="section_heading_title_big">Ready to get started? <br> 2M+ businesses already joined</h2>
+            <h2 class="section_heading_title_big"><?php echo $cta_title; ?></h2>
         </div>
         <div class="text-center">
-            <div class="cta-1-link-bt"><a href="index.html" class="btn-1">Start 14 Days Free Trial <span></span></a>
+            <div class="cta-1-link-bt"><a href="<?php echo $cta_button_url; ?>" class="btn-1"><?php echo $cta_button_text; ?><span></span></a>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
         <div class="auto-container">
             <div class="content-box">
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
                 </ul>
                 <h1><?php the_title(); ?></h1>
             </div>

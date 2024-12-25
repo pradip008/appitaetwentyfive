@@ -167,6 +167,21 @@ function customizer_top_header_settings($wp_customize) {
         'type'    => 'textarea',
     ));
 
+    $wp_customize->add_setting('footer_logo', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw', // Use esc_url_raw for image URLs
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'footer_logo',
+        array(
+            'label'   => __('Footer Logo', 'your-theme'),
+            'section' => 'footer_theme_section',
+            'settings' => 'footer_logo',
+        )
+    ));
+
      
      
 

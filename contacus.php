@@ -12,7 +12,7 @@ get_header();
         <div class="auto-container">
             <div class="content-box">
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
                     <li>Connect with Us</li>
                 </ul>
                 <h1>Connect with Us</h1>
