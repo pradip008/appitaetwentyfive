@@ -159,14 +159,11 @@
                     <!--Logo-->
 
                     <div class="logo logo-theme-main">
-                        <?php
-                        if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-                        the_custom_logo();
-                        } else {
-                        // Fallback: display the site name or a default logo
-                        echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="site-title">' . get_bloginfo( 'name' ) . '</a>';
-                        }
-                        ?>
+                    <?php
+                          $footer_logo      = get_theme_mod('footer_logo', ''); 
+                    ?>
+                        <img src='<?php echo  $footer_logo ; ?>' alt="" width='230px'/>
+                    
                     </div>
                     
                     <!--Right Col-->

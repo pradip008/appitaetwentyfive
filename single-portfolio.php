@@ -27,65 +27,101 @@ get_header();
      ?>
 
      
-     <!-- Portfolio details Start -->
+    <!-- Portfolio details Start -->
     <section class="portfolio-details">
         <div class="auto-container">
+            <!-- Featured Image -->
             <div class="details-image-box">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/images/gallery/details-image-one.png" alt="">
+                <?php if (get_field('banner_main_image_')) : ?>
+                    <img src="<?php  echo get_field('banner_main_image_'); ?>" alt="<?php the_title(); ?>" width='1290px' style="height:600px">
+                <?php else : ?>
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/gallery/details-image-one.png" alt="">
+                    <?php endif; ?>
             </div>
             <div class="medium-container">
                 <div class="categore-items">
                     <div class="row clearfix">
+                        <!-- Client Name -->
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="category-details one">
                                 <h4>Client:</h4>
-                                <p>Adam Smith</p>
+                                <p><?php echo get_post_meta(get_the_ID(), 'client_name', true); ?></p>
                             </div>
                         </div>
+                        <!-- Category -->
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="category-details two">
                                 <h4>Category:</h4>
-                                <p>UI/UX design</p>
+                            
+                                <p> <?php
+                                    $terms = get_the_terms(get_the_ID(), 'portfolio-category');
+                                    if ($terms && !is_wp_error($terms)) {
+                                        $term_links = array_map(function ($term) {
+                                            return '<span">' . esc_html($term->name) . '</span>';
+                                        }, $terms);
+                                        echo implode(', ', $term_links);
+                                    } else {
+                                        echo 'No Category Assigned';
+                                    }
+                                    ?></p>
                             </div>
                         </div>
+                        <!-- Duration -->
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="category-details three">
                                 <h4>Duration:</h4>
-                                <p>05 Weeks</p>
+                                <p><?php  echo get_post_meta(get_the_ID(), 'duration', true); ?></p>
                             </div>
                         </div>
+                        <!-- Website Link -->
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="category-details four">
                                 <h4>Website Link:</h4>
-                                <p>example@gmail.com</p>
+                                <p>
+                                    <a href="<?php echo esc_url(get_post_meta(get_the_ID(), 'website_link', true)); ?>" target="_blank">
+                                        <?php echo get_post_meta(get_the_ID(), 'website_link', true); ?>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Project Overview -->
             <div class="text-box">
-                <h2>Project overview</h2>
-                <p>Mobile UX design is the design of user experiences for hand-held and wearable devices. Designers create solutions (typically applications) to meet mobile users’ unique requirements and restrictions. Designers focus on accessibility, discoverability and efficiency to optimize on-the-go interactive experiences.</p>
-                <p>User Interface (UI) determines how the app will look like, while UX determines what problem it will solve in the users’ life. UI is revolves around visually directing the user about the app interface, while UX includes researching, testing, developing the app.</p>
-            </div>
-            <div class="text-box-two">
-                <h4>What we did for this project</h4>
-                <p>Mobile UX design is the design of user experiences for hand-held and wearable devices. Designers create solutions (typically applications) to meet mobile users’ unique requirements and restrictions. Designers focus on accessibility, discoverability and efficiency to optimize on-the-go interactive experiences.</p>
-                <ul class="list-icons">
-                    <li><i class="icon-5"></i><span>Flexible Solution</span></li>
-                    <li><i class="icon-5"></i><span>Constant Updates</span></li>
-                    <li><i class="icon-5"></i><span>Accounting Entry Methods</span></li>
-                </ul>
-            </div>
-            <div class="text-box-two">
-                <h4>Project results</h4>
-                <p>The UI/UX design of software and applications helps improve customer experience and satisfaction. This ultimately helps increase the number of people using your product. If users encounter roadblocks when trying to complete actions on your product, they are very likely to drop off.</p>
-                <p>Creating a brand with clear and targeted messaging was crucial in increasing conversions. Together with the Webflow team, we have compiled a new product page structure using the App model and packed that in an excellent cover.</p>
+                <h2>Project Overview</h2>
+                <p><?php  echo get_post_meta(get_the_ID(), 'project_overview', true); ?></p>
             </div>
         </div>
     </section>
     <!-- Portfolio details End -->
 
+
+    
+
+
+  <!-- Cta Section Start-->
+  <section class="cta-section">
+    <div class="cta-1-bg" data-parallax='{"y": 30}'
+        style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
+    </div>
+    <?php
+    $cta_title = get_field('cta_title');
+    $cta_button_text = get_field('cta_button_text');
+    $cta_button_url = get_field('cta_button_url');
+    ?>
+    <div class="auto-container">
+        <div class="section_heading text-center">
+            <h2 class="section_heading_title_big">Contact us today and discover how Appitae Solutions</br>
+            can help you achieve your business goals.</h2>
+        </div>
+        <div class="text-center">
+            <div class="cta-1-link-bt"><a href="<?php echo home_url(); ?>/contact-us" class="btn-1">Let’s innovate together!<span></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cta Section End-->
 
 
 

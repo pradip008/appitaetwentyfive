@@ -103,51 +103,28 @@ $portfolio_categories = get_terms(array(
     </section>
     <!--Gallery Section Five-->
 
+    
+<!-- Cta Section Start-->
+<section class="cta-section">
+    <div class="cta-1-bg" data-parallax='{"y": 30}'
+        style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
+    </div>
+    <?php
+    $cta_title = get_field('cta_title');
+    $cta_button_text = get_field('cta_button_text');
+    $cta_button_url = get_field('cta_button_url');
+    ?>
+    <div class="auto-container">
+        <div class="section_heading text-center">
+            <h2 class="section_heading_title_big"><?php echo $cta_title; ?></h2>
+        </div>
+        <div class="text-center">
+            <div class="cta-1-link-bt"><a href="<?php echo $cta_button_url; ?>" class="btn-1"><?php echo $cta_button_text; ?><span></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cta Section End-->
+
 <?php get_footer(); ?>
 
-<div class="sortable-masonry">
-                
-                <!--Filter-->
-                <div class="filters centred clearfix">
-                    <ul class="filter-tabs filter-btns clearfix">
-                        <li class="active filter" data-role="button" data-filter=".all">Show all</li>
-                        <li class="filter" data-role="button" data-filter=".desing">Desing</li>
-                        <li class="filter" data-role="button" data-filter=".finence">Finence</li>
-                        <li class="filter" data-role="button" data-filter=".trends">Trends</li>
-                        <li class="filter" data-role="button" data-filter=".marketing">Marketing</li>
-                    </ul>
-                </div>
-                <div class="items-container row clearfix">
-                    <!--Gallery Item Five-->
-                    <div class="gallery-item-five masonry-item small-column all desing trends col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/gallery/gallery-01.png" alt="" />
-                                <div class="overlay-box">
-                                    <a href="<?php bloginfo('template_directory'); ?>/assets/images/gallery/gallery-01.png" data-fancybox="gallery" class="lightbox-image popup-box" title="Image Title Here"><span class="fa fa-expand"></span></a>
-                                    <a class="link-btn" href="portfolio-details.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="lower-box">
-                            	<h3><a href="portfolio-details.html">The power of communication</a></h3>
-                                <p>Artical</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item-five masonry-item small-column all desing trends col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/gallery/gallery-06.png" alt="" />
-                                <div class="overlay-box">
-                                    <a href="<?php bloginfo('template_directory'); ?>/assets/images/gallery/gallery-06.png" data-fancybox="gallery" class="lightbox-image popup-box" title="Image Title Here"><span class="fa fa-expand"></span></a>
-                                    <a class="link-btn" href="portfolio-details.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="lower-box">
-                            	<h3><a href="portfolio-details.html">UX Web Design</a></h3>
-                                <p>UI/UX</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>

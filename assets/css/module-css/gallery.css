@@ -46,7 +46,8 @@
 .gallery-section-five .filters .filter.active,
 .gallery-section-five .filters .filter:hover{
 	color:rgba(255, 255, 255, 1);
-	background: linear-gradient(90deg, #692FFF 1.33%, #CA38FF 99%);
+	
+    background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 }
 
 .gallery-section-five .btn-box{
@@ -350,7 +351,7 @@
 /* ---------portfoli-details--------- */
 .portfolio-details {
     position: relative;
-    margin: 150px 0px 100px;
+    margin: 100px 0px 100px;
 }
 .details-image-box img {
     border-radius: 10px;
@@ -400,7 +401,7 @@
 	position: absolute;
 	content: "";
 	top: 7px;
-	left: 155px;
+	left: 174px;
 	width: 1px;
 	height: 45px;
 	background: rgba(229, 229, 229, 1);

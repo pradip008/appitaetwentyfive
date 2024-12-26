@@ -66,7 +66,7 @@
 
 
 :root{
-	--theme-color: rgba(203, 56, 255, 1);
+	--theme-color: #0162ff;
 	--primary-color:#F8F1FF;
 	--text-color: rgba(106, 106, 106, 1);
 	--title-color: rgba(17, 17, 17, 1);
@@ -336,7 +336,7 @@ ul,li{
 	top: 0;
 	width: 100%;
 	z-index: 9999999;
-	background: #CB38FF;
+	background: #0162ff;
   }
   
   .preloader-close{
@@ -344,7 +344,7 @@ ul,li{
 	z-index: 99999999;
 	font-size: 14px;
 	background: #fff;
-	color: #CB38FF;
+	color: #0162ff;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
@@ -646,7 +646,7 @@ img{
 	text-align:center;
 	z-index:100;
 	cursor:pointer;
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+	background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 	display:none;
 	border-radius:3px;
 	-webkit-transition:all 500ms ease;
@@ -693,7 +693,7 @@ img{
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
-    color: var(--title-color);
+    color: rgb(1 98 255);
     font-family: var(--text-font);
     margin-bottom: 10px;
     text-transform: uppercase;

@@ -346,7 +346,7 @@ get_header();
                     </div>
                     <div class="progress-two">
                         <div class="circular-progress" data-inner-circle-color="white" data-percentage="<?php echo get_field('wc_count_percentage');?>"
-                            data-progress-color="rgba(104, 47, 255, 1)" data-bg-color="rgba(240, 232, 243, 1)">
+                            data-progress-color="rgb(1 94 242)" data-bg-color="rgb(1 94 242 / 11%)">
                             <div class="inner-circle"></div>
                             <p class="percentage">0%</p>
                         </div>

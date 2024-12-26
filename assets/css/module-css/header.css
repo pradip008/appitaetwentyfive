@@ -267,7 +267,7 @@ header.main-header.five.header-style-one{
 }
 .header-style-three .main-menu.four .navigation > li:hover > a,
 .header-style-three .main-menu.four .navigation > li.current > a{
-	color: rgb(12, 11, 13) !important;
+	color: #002655 !important;
 	opacity:1;
 }
 
@@ -275,7 +275,7 @@ header.main-header.five.header-style-one{
 .header-style-three .main-menu .navigation > li.current > a,
 .header-style-five .main-menu .navigation > li:hover > a,
 .header-style-five .main-menu .navigation > li.current > a{
-	color:#CB38FF !important;
+	color:#0162ff !important;
 }
 
 .header-style-four .main-menu .navigation > li:hover > a,
@@ -320,7 +320,7 @@ header.main-header.five.header-style-one{
 	z-index:100;
 	display:none;
 	padding:0px 0px;
-	background:#101010;
+	background:#002655;
 	border-top:2px solid #682FFF;
 	transition:all 900ms ease;
 	-moz-transition:all 900ms ease;
@@ -371,7 +371,7 @@ header.main-header.five.header-style-one{
 
 .main-menu .navigation > li > ul > li:hover > a{
 	color:var(--white-color);
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+	background: linear-gradient(270deg, #0162ff 0%, #0162ff 100%);
 }
 
 .main-menu .navigation > li > ul > li.dropdown > a:after{
@@ -414,7 +414,7 @@ header.main-header.five.header-style-one{
 .header-style-three .main-menu .navigation > li > ul > li > ul,
 .header-style-five .main-menu .navigation > li > ul,
 .header-style-five .main-menu .navigation > li > ul > li > ul{
-	border-top-color:#CB38FF;	
+	border-top-color:#ffffff;	
 }
 
 .header-style-four .main-menu .navigation > li > ul,
@@ -818,7 +818,7 @@ header.main-header.five.header-style-one{
 }
 .theme-btn:hover{
 	color: var(--white-color);
-	border:1px solid #CB38FF;
+	border:1px solid #015ced;
 }
 .theme-btn:before, .theme-btn:after {
 	position: absolute;
@@ -828,7 +828,7 @@ header.main-header.five.header-style-one{
     height: 100%;
     content: '';
     z-index: -1;
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+	background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 	color: var(--white-color);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;

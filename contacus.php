@@ -20,32 +20,51 @@ get_header();
         </div>
     </section>
     <!-- page-title end -->
-
+    <?php 
+        $phone      = get_theme_mod('top_header_phone', '');
+        $phone_link = get_theme_mod('top_header_phone_link', '');
+        $email      = get_theme_mod('top_header_email', '');
+        $email_link = get_theme_mod('top_header_email_link', '');
+        $address = get_theme_mod('top_header_address', '');
+    ?>
     <section class="social-contact-section">
         <div class="auto-container">
             <div class="contact-info">
                 <div class="row clearfix">
-                    <div class="info-block col-lg-4 col-md-6 col-sm-12">
+                <?php             
+                if ($email && $email_link) {
+                                    
+                   echo '<a href="mailto:' . esc_html($email_link) . '"> <div class="info-block col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="icon-box"><span class="icon-40"></span></div>
                             <h4>Email Us</h4>
-                            <div class="text">info@example.com</div>
+                            <div class="text">' . esc_html($email) . '</div>
                         </div>
-                    </div>
-                    <div class="info-block col-lg-4 col-md-6 col-sm-12">
+                    </div></a>';           
+                }
+                       
+                if ($phone  && $phone_link) {
+                                    
+                   echo '<a href="tel:' . esc_html($phone_link) . '"> <div class="info-block col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="icon-box"><span class="icon-41"></span></div>
                             <h4>Call Us</h4>
                             <div class="text">+1(888)1234-5678</div>
                         </div>
-                    </div>
-                    <div class="info-block col-lg-4 col-md-6 col-sm-12">
+                    </div></a>';           
+                }
+                if ($address) {
+                                    
+                    echo '<div class="info-block col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="icon-box"><span class="icon-42"></span></div>
                             <h4>Office Location</h4>
-                            <div class="text">121 King st. 3000, Australia</div>
+                            <div class="text">' . esc_html($address) . '</div>
                         </div>
-                    </div>
+                    </div>';           
+                 }
+                ?>
+    
                 </div>
             </div>
             <div class="contact-shape-image">
@@ -90,19 +109,27 @@ get_header();
 
 
 
-    <!-- Cta Section Start-->
-    <section class="cta-section-two">
-        <div class="cta-2-bg" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta_bg_image.png);"></div>
-        <div class="auto-container">
-            <div class="section_heading text-center">
-                <h2 class="section_heading_title_big">Ready to get started? <br> 2M+ businesses already joined</h2>
-            </div>
-            <div class="link-box">
-                <a href="integrations.html" class="btn-large">See All Integration</a>
+<!-- Cta Section Start-->
+<section class="cta-section">
+    <div class="cta-1-bg" data-parallax='{"y": 30}'
+        style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
+    </div>
+    <?php
+    $cta_title = get_field('cta_title');
+    $cta_button_text = get_field('cta_button_text');
+    $cta_button_url = get_field('cta_button_url');
+    ?>
+    <div class="auto-container">
+        <div class="section_heading text-center">
+            <h2 class="section_heading_title_big"><?php echo $cta_title; ?></h2>
+        </div>
+        <div class="text-center">
+            <div class="cta-1-link-bt"><a href="<?php echo $cta_button_url; ?>" class="btn-1"><?php echo $cta_button_text; ?><span></span></a>
             </div>
         </div>
-    </section>
-    <!-- Cta Section End-->
+    </div>
+</section>
+<!-- Cta Section End-->
   
 
 <?php get_footer(); ?>

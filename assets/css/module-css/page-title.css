@@ -46,7 +46,7 @@
 .page-title .bread-crumb li:last-child{
     padding: 0px !important;
     margin: 0px !important;
-    background: linear-gradient(90deg, #CB38FF 52.35%, #692FFF 99.64%);
+    background: linear-gradient(90deg, #082c5a 52.35%, #083269 99.64%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,6 +69,7 @@
     font-weight: 400;
     top: 0px;
     right: 0px;
+    color: white;
 }
 
 .page-title .bread-crumb li:last-child:before{

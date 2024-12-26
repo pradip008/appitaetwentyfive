@@ -68,7 +68,7 @@ function customizer_top_header_settings($wp_customize) {
     //Email Link.
     $wp_customize->add_setting('top_header_email_link', array(
         'default'           => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('top_header_email_link', array(
         'label'   => __('Email Link (mailto:)', 'your-theme'),

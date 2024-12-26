@@ -11,7 +11,7 @@
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 150px 0 122px 0;
+	padding: 100px 0 40px 0;
 }
 .service-style-one{
 	position:relative;
@@ -43,8 +43,8 @@
 	border-radius:50%;
 	font-size: 35px;
 	line-height: 75px;
-	background-color: var(--primary-color);
-	border: 3px solid var(--primary-color);
+	background-color: #0158e312;
+	border: 3px solid #015ef500;
 }
 .service-style-one .inner-box .icon-box .icon{
 	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
@@ -71,7 +71,7 @@
 	transition: all 500ms ease;
 }
 .service-style-one .inner-box h3 a:hover{
-	color:#CB38FF;
+	color:#0160f9;
 }
 .service-style-one .inner-box .text{
 	position:relative;
@@ -117,7 +117,7 @@
     height: 100%;
     content: '';
     z-index: -1;
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+	background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 	color: var(--white-color);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;
@@ -177,7 +177,7 @@
 	-o-transition:all 0.3s ease;
 }
 .service-style-two .inner-box h3 a:hover{
-	color: #CB38FF;
+	color: #0162ff;
 }
 .service-style-two .inner-box .text{
 	position:relative;
@@ -198,8 +198,8 @@
 
 /* -------------------------- */
 .customer-service {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .title-content .list-item {
     display: flex;
@@ -353,7 +353,7 @@
 	position:relative;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 150px 0 120px 0;
+	padding: 100px 0 80px 0;
 }
 .services-section-four .sec-title {
     padding-bottom: 25px;
@@ -451,7 +451,7 @@
 
 /* -----------business impact Style------------------ */
 .business-impact {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
 }
 .business-impact.two{
 	padding-bottom: 80px;
@@ -495,7 +495,7 @@
 /* ---------service details----------- */
 .service-details{
 	position: relative;
-	padding: 150px 0px 150px;
+	padding: 50px 0px 60px;
 } 
 .default-sidebar .sidebar-widget{
 	position: relative;
@@ -561,7 +561,7 @@
 	font-size: 35px;
 	border-radius: 50%;
 	text-align: center;
-	background-color: var(--primary-color);
+	background-color: #0158e312;
 	height: 80px;
 	width: 80px;
 	line-height: 80px;

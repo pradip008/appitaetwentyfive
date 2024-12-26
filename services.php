@@ -363,19 +363,27 @@ wp_reset_postdata();
     </section>
     <!-- testimonial section end -->
 
-    <!-- Cta Section Start-->
-    <section class="cta-section">
-        <div class="cta-1-bg" data-parallax='{"y": 30}' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);"></div>
-        <div class="auto-container">
-            <div class="section_heading text-center">
-                <h2 class="section_heading_title_big">Ready to get started? <br> 2M+ businesses already joined</h2>
-            </div>
-            <div class="text-center">
-                <div class="cta-1-link-bt"><a href="index.html" class="btn-1">Start 14 Days Free Trial <span></span></a></div>
+     <!-- Cta Section Start-->
+<section class="cta-section">
+    <div class="cta-1-bg" data-parallax='{"y": 30}'
+        style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
+    </div>
+    <?php
+    $cta_title = get_field('cta_title');
+    $cta_button_text = get_field('cta_button_text');
+    $cta_button_url = get_field('cta_button_url');
+    ?>
+    <div class="auto-container">
+        <div class="section_heading text-center">
+            <h2 class="section_heading_title_big"><?php echo $cta_title; ?></h2>
+        </div>
+        <div class="text-center">
+            <div class="cta-1-link-bt"><a href="<?php echo $cta_button_url; ?>" class="btn-1"><?php echo $cta_button_text; ?><span></span></a>
             </div>
         </div>
-    </section>
-    <!-- Cta Section End-->
+    </div>
+</section>
+<!-- Cta Section End-->
 
 
 <?php get_footer(); ?>

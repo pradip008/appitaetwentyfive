@@ -10,7 +10,7 @@
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 150px 0px 135px 0px;
+    padding: 100px 0px 70px 0px;
 }
   
 .testimonial-section .owl-carousel .owl-stage-outer{
@@ -130,7 +130,7 @@
     height: 15px;
 }
 .owl-theme .owl-dots .owl-dot.active span {
-    background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+    background: linear-gradient(270deg, #015ff7 0%, #0161fd 100%);
     border-radius: 50%;
 }
 
@@ -180,7 +180,7 @@
     height: 100%;
     content: '';
     z-index: -1;
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+    background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 	color: var(--white-color);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;
@@ -195,7 +195,7 @@
 }
     
 .slider-nav-style-2 .slider-button-prev:hover {
-    border-color: #CB38FF;
+    border-color: #015ef3;
     color: #fff;
 }
 .slider-control.slider-button-next {
@@ -224,7 +224,7 @@
     height: 100%;
     content: '';
     z-index: -1;
-	background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
+	background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 	color: var(--white-color);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;
@@ -237,7 +237,7 @@
     width: 100%;
 }
 .slider-nav-style-2 .slider-button-next:hover {
-    border-color: #CB38FF;
+    border-color: #0159e5;
     color: #fff;
 }
 .swiper-slide.testimonial-block-one {

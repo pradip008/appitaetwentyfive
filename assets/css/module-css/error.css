@@ -1,6 +1,6 @@
 .error-section.centred {
     position: relative;
-    padding: 170px 0px;
+    padding: 100px 0px;
 }
 
 .error-section .error-image {
@@ -11,7 +11,7 @@
 .error-section h5 {
     position: absolute;
     left: 48%;
-    top: 204px;
+    top: 133px;
     font-family: var(--text-font);
     font-size: 28px;
     font-weight: 500;
@@ -28,8 +28,7 @@
     line-height: 78px;
     letter-spacing: 0px;
     text-align: center;
-    background: linear-gradient(90deg, rgba(203, 56, 255, 0.1) 0%, rgba(105, 47, 255, 0.1) 100%);
-    background-clip: text;
+    background: linear-gradient(90deg, rgb(1 85 216 / 15%) 0%, rgb(1 96 250 / 10%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 500ms ease;
