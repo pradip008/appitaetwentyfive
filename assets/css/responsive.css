@@ -126,6 +126,7 @@
 	}
 	.menu-area.two .mobile-nav-toggler {
 		background-color: #ffffff;
+		border-radius: 15px;
 	}
 	.menu-area.two.bg-color .mobile-nav-toggler {
 		background-color: #0e1d40;
@@ -246,6 +247,7 @@
 	}
 	.banner-section{
 		margin-bottom: 150px;
+		padding-top: 40px;
 	}
 	.faq-section .sec-title{
 		padding-top: 135px;
@@ -292,6 +294,27 @@
 	}
 	.logo.logo-theme-main {
 		width: 119px;
+	}
+	.banner-carousel .content-box .title-text{
+		font-size: 13px;
+	}
+	.banner-section.banner-style-four .content-box p{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.section_heading_title_big {
+        font-size: 23px;
+        line-height: 35px;
+    }
+	.cta-section{
+		padding: 45px 0 50px 0;
+	}
+	.page-title{
+		padding: 140px 0px 90px 0px !important;
+	}
+	.page-title h1{
+		font-size: 38px !important;
+		line-height: 43px !important;
 	}
 	
 }
@@ -459,6 +482,17 @@
 	.banner-carousel .slide-item .image-box .image-shape-4 img{
 		margin-left: 0px;
 	}
+	.heading_title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+	.page-title{
+		padding: 140px 0px 90px 0px;
+	}
+	.page-title h1{
+		font-size: 38px;
+		line-height: 38px;
+	}
 	
 }
 
@@ -566,6 +600,17 @@
         bottom: 0px;
         right: 0px;
     }
+	.heading_title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+	.page-title{
+		padding: 140px 0px 90px 0px;
+	}
+	.page-title h1{
+		font-size: 38px;
+		line-height: 38px;
+	}
 }
 
 	/* --------------------------------------------- */
@@ -627,6 +672,17 @@
 	.progress_right_content {
         padding-top: 230px;
     }
+	.heading_title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+	.page-title{
+		padding: 140px 0px 90px 0px;
+	}
+	.page-title h1{
+		font-size: 38px;
+		line-height: 38px;
+	}
 }
 	
 
@@ -776,14 +832,21 @@
 		padding: 34px 15px 34px 55px;
 	}
 	.banner-carousel .content-box h2{
-		font-size: 55px;
+		font-size: 28px;
+        line-height: 39px;
 	}
 	.image-box .image-shape-6 {
 		top: 140px;
 		right: 0px;
 	}
 	.block_image_three {
-		bottom: 0px;
+		width: 128px;
+        right: 6px;
+        top: 16px;
+	}
+	.heading_title{
+		font-size: 30px;
+        line-height: 38px;
 	}
 	.title-content.two .data-list .list_item_two:before {
 		border-bottom: none;
@@ -859,11 +922,21 @@
 		right: 15px;
 	}
 	.banner-carousel .slide-item .image-box {
-        padding-top: 150px;
+        padding-top: 15px;
     }
+	.image.shape_one.visitor_progress {
+		margin-top: 10px;
+	}
 	.image-box .image.shape_one {
         margin-top:0px;
 		height: 500px;
     }
+	.page-title{
+		padding: 140px 0px 90px 0px;
+	}
+	.page-title h1{
+		font-size: 38px;
+		line-height: 38px;
+	}
 	
 }

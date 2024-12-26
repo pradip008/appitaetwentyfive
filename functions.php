@@ -38,24 +38,24 @@ function appitae_twentyfive_enqueue_styles() {
   wp_enqueue_style( 'project-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/project.css', array(), '5.3.45' ,'all');
   wp_enqueue_style( 'responsive-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/responsive.css', array(), '5.3.45' ,'all');
   wp_enqueue_style( 'page-title-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/page-title.css', array(), '5.3.47' ,'all');
-  wp_enqueue_style( 'team-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/team.css', array(), '5.3.48' ,'all');
-  //portfolio 
-  wp_enqueue_style( 'gallery-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/gallery.css', array(), '5.3.49' ,'all');
+  //wp_enqueue_style( 'team-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/team.css', array(), '5.3.48' ,'all');
   
-
- 
+  
+  
   // all script enqueue code 
   wp_enqueue_script( 'jquery-min', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/jquery.js','[]','1.18.0', true );
   wp_enqueue_script( 'bootstrap-min', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/bootstrap.min.js', array(), '1.1.0', true );
   wp_enqueue_script( 'mCustomScrollbar', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/jquery.mCustomScrollbar.concat.min.js', array(), '1.2.0', true );
   wp_enqueue_script( 'fancybox', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/jquery.fancybox.js', array(), '1.3.0', true );
   //contact form js start 
+  if (is_page('contact-us')) {
   wp_enqueue_script( 'validation-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/validation.js', array(), '1.4.0', true );
   //contact form js end
+  }
   wp_enqueue_script( 'appear-js', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/appear.js', array(), '1.4.0', true );
   //porrtfolio
-  if (is_page_template('portfolio.php')) {
-    
+  if (is_single() || is_page_template('portfolio.php')) {
+    wp_enqueue_style( 'gallery-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/gallery.css', array(), '5.3.49' ,'all');
     wp_enqueue_script( 'isotope-js', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/isotope.js', array(), '1.4.15', true );
   }
   wp_enqueue_script( 'owl-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/owl.js', array(), '1.5.0', true );
@@ -70,6 +70,7 @@ add_action( 'wp_enqueue_scripts', 'appitae_twentyfive_enqueue_styles' );
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/menus.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/customizer.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/custom-post-type.php';
+require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/disable-update.php';
 
 // Add theme support for various features
 function appitae_twentyfive_theme_setup() {
@@ -108,10 +109,4 @@ function appitae_twentyfive_theme_setup() {
 add_action( 'after_setup_theme', 'appitae_twentyfive_theme_setup' );
 
 
-// Disable updates for the ACF plugin
-add_filter('site_transient_update_plugins', function($value) {
-  if (isset($value->response['advanced-custom-fields-pro/acf.php'])) {
-      unset($value->response['advanced-custom-fields-pro/acf.php']);
-  }
-  return $value;
-});
+
