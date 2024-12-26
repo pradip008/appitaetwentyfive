@@ -32,14 +32,14 @@
      <section class="sidebar-page-container">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="col-lg-12 col-md-6 col-sm-12 content-side">
+                <div class="col-lg-8 col-md-6 col-sm-12 content-side">
                     <div class="blog-details-content">
                         <div class="news-block-one">
                             <div class="inner-box wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <?php if (has_post_thumbnail( $post->ID ) ): ?>
                                 <div class="image">
                                   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                                    <img src="<?php echo $image[0]; ?>" alt="">
+                                    <img src="<?php echo $image[0]; ?>" alt="" width="100%">
                                 </div>
                                 <?php endif; ?>
                                 <div class="lower-content">
@@ -54,140 +54,56 @@
                             </div>
                         </div>
 
-                        <!-- <div class="content-one">
-                            <div class="group-title">
-                                <h3>Work harder & gain success</h3>
-                            </div>
-                            <div class="text">Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit.
-                            </div>
-                            <div class="text">Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.
-                            </div>
-                        </div>
-                        <div class="details-image">
-                            <div class="details-image-one"><img src="assets/images/news/details_img_two.png" alt=""></div>
-                            <div class="details-image-two"><img src="assets/images/news/details_img_three.png" alt=""></div>
-                        </div>
-                        <div class="content-one">
-                            <div class="group-title">
-                                <h3>Manage your online business</h3>
-                            </div>
-                            <div class="text">Lorem ipsum dolor sit amet consectetur. Nullam blandit dui gravida aliquam enim eu. Adipiscing viverra vulputate curabitur est. Lorem ipsum dolor sito amet, conse ctetuer adipiscing elit sed diam nonum nibhie euisod.
-                            </div>
-                            <ul class="list-style-two">
-                                <li><span class="icon-5"></span> Giant Fishes Farming</li>
-                                <li><span class="icon-5"></span> Water & Plants Filtration Systems</li>
-                                <li><span class="icon-5"></span> Seafood Import Export</li>
-                            </ul>
-                        </div> -->
-
-                        <!-- <div class="share-social-icon">
-                            <div class="social-text">Share This:</div>
-                            <div class="social-icon">
-                                <ul class="social-icon-list">
-                                    <li><a href="index.html"><span class="icon-14"></span></a></li>
-                                    <li><a href="index.html"><span class="icon-15"></span></a></li>
-                                    <li><a href="index.html"><span class="icon-16"></span></a></li>
-                                    <li><a href="index.html"><span class="icon-17"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="content-one">
-                            <div class="group-title">
-                                <h3>Leave a Reply</h3>
-                            </div>
-                            <div class="text">Enim orci aliquam malesuada porttitor feugiat tellus malesuada quis fermentum mattis sit fringilla id feugiat velit non sed id.
-                            </div>
-                        </div>
-                        <div class="form-inner">
-                            <form method="post" action="blog-detail.html" id="contact-form" class="default-form"> 
-                                <div class="row clearfix">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label id="Name">Name</label>
-                                        <input type="text" name="username" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label id="Email">Email</label>
-                                        <input type="email" name="email" required="">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <label id="Message">Message</label>
-                                        <textarea name="message"></textarea>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                        <div class="link-box three">
-                                            <button type="submit" class="btn-large team-btn"><span>Post Comment</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div> -->
+                    
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="blog-sidebar default-sidebar">
-                        <div class="sidebar-widget search-widget">
-                            <div class="search-form">
-                                <form action="blog-2.html" method="post">
-                                    <div class="form-group">
-                                        <input type="search" name="search-field" placeholder="Type to search..." required>
-                                        <button type="submit"><i class="icon-1"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget category-widget">
-                            <div class="widget-title">
-                                <h3>Categories</h3>
-                            </div>
-                            <div class="widget-content">
-                                <ul class="category-list blog-page clearfix">
-                                    <li><a href="blog-details.html"><span>Agency (3)</span></a></li>
-                                    <li><a href="blog-details.html"><span>Designs (7)</span></a></li>
-                                    <li><a href="blog-details.html"><span>Marketing (5)</span></a></li>
-                                    <li><a href="blog-details.html"><span>Business (8)</span></a></li>
-                                    <li><a href="blog-details.html"><span>Technology (2)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <div class="sidebar-widget post-widget">
                             <div class="widget-title">
-                                <h3>Latest News</h3>
+                                <h3>Latest blog</h3>
                             </div>
                             <div class="post-inner">
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-1.png" alt=""></a></figure>
-                                    <h5><a href="blog-details.html">Laoreet ipsum augue eget egestas...</a></h5>
-                                    <span class="post-date">Mar 17, 2024</span>
+                            <?php
+                                // WordPress loop to fetch latest posts
+                                $args = array(
+                                    'post_type' => 'post',
+                                    'posts_per_page' => -1, // Number of posts to display
+                                );
+                                $query = new WP_Query($args);
+
+                                if ($query->have_posts()) :
+                                    while ($query->have_posts()) : $query->the_post();
+                                ?>
+                                   
+                                    <div class="post">
+                                    <figure class="post-thumb">
+                                        <a href="<?php the_permalink(); ?>">
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <?php the_post_thumbnail('full'); ?>
+                                                    <?php else : ?>
+                                                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/news/post-1.png" alt="<?php the_title(); ?>">
+                                                    <?php endif; ?>
+                                        </a>
+                                    </figure>
+                                    <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                    <span class="post-date"><?php echo get_the_date(); ?></span>
                                 </div>
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-2.png" alt=""></a></figure>
-                                    <h5><a href="blog-details.html">Always ready to solve all your problems.</a></h5>
-                                    <span class="post-date">Mar 17, 2024</span>
-                                </div>
-                                <div class="post">
-                                    <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-3.png" alt=""></a></figure>
-                                    <h5><a href="blog-details.html">Dangers of a traditional for your career goal</a></h5>
-                                    <span class="post-date">Mar 17, 2024</span>
-                                </div>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p>No posts found.</p>';
+                                endif;
+                                ?>
                             </div>
                         </div>
-                        <div class="sidebar-widget tags-widget">
-                            <div class="widget-title">
-                                <h3>Popular tag</h3>
-                            </div>
-                            <div class="widget-content">
-                                <ul class="tags-list clearfix">
-                                    <li><a href="blog-details.html">Business</a></li>
-                                    <li><a href="blog-details.html">Desing</a></li>
-                                    <li><a href="blog-details.html">UI/UX</a></li>
-                                    <li><a href="blog-details.html">Artical</a></li>
-                                    <li><a href="blog-details.html">Trends</a></li>
-                                    <li><a href="blog-details.html">Finance</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
+                      
+                       
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>

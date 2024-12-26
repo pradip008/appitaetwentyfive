@@ -27,7 +27,7 @@ get_header();
     // WordPress loop to fetch latest posts
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 6, // Number of posts to display
+        'posts_per_page' => -1, // Number of posts to display
     );
     $query = new WP_Query($args);
 

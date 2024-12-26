@@ -105,11 +105,6 @@ get_header();
     <div class="cta-1-bg" data-parallax='{"y": 30}'
         style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
     </div>
-    <?php
-    $cta_title = get_field('cta_title');
-    $cta_button_text = get_field('cta_button_text');
-    $cta_button_url = get_field('cta_button_url');
-    ?>
     <div class="auto-container">
         <div class="section_heading text-center">
             <h2 class="section_heading_title_big">Contact us today and discover how Appitae Solutions</br>

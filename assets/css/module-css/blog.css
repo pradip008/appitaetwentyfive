@@ -366,7 +366,9 @@
 /* ----------Blog Details Css------------------------ */
 .sidebar-page-container {
     position: relative;
-    margin: 10px 0px;
+    margin: 10px 00px;
+    padding-bottom: 80px;
+
 }
 .blog-details-content {
 	padding-right: 15px;

@@ -28,10 +28,10 @@
                                 $linkedin_link = get_theme_mod('top_header_linkedin_link', '');
                                 $twitter_link = get_theme_mod('top_header_twitter_link', '');
                                 ?>
-                                <li><a href="<?php echo $facebook_link ?>"><i class="icon-14"></i></a></li>
-                                <li><a href="<?php echo  $instagram_link ?>"><i class='fa fa-instagram' aria-hidden="true"></i></a></li>
-                                <li><a href="<?php echo $linkedin_link ?>"><i class="icon-16"></i></a></li>
-                                <li><a href="<?php echo $twitter_link ?>"><i class="icon-15"></i></a></li>
+                                <li><a href="<?php echo $facebook_link ?>" target='_blank'><i class="icon-14"></i></a></li>
+                                <li><a href="<?php echo  $instagram_link ?>" target='_blank'><i class='fa fa-instagram' aria-hidden="true"></i></a></li>
+                                <li><a href="<?php echo $linkedin_link ?>" target='_blank'><i class="icon-16"></i></a></li>
+                                <li><a href="<?php echo $twitter_link ?>" target='_blank'><i class="icon-15"></i></a></li>
                             </ul>
                         </div>
                     </div>

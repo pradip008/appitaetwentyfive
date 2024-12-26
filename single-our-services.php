@@ -123,37 +123,37 @@
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/manufacturing.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Manufacturing</h3>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/Education.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Education</h3>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/Technology-IT.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Technology & IT</h3>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/Hospitality.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Hospitality</h3>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/real-estate.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Real Estate</h3>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-lg-4 col-sm-12 single-column serve-col">
                                         <div class="single-item">
-                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/heathcare.webp" class="home-service-icon"></div>
+                                            <div class="icon-box serce-box"><img src="<?php echo home_url(); ?>/wp-content/uploads/2024/12/Non-Profit.webp" class="home-service-icon"></div>
                                             <h3 class='serve'>Non-Profit</h3>
                                         </div>
                                     </div>
@@ -176,19 +176,23 @@
         }
      }
      ?>
-     <!-- Cta Section Start-->
-    <section class="cta-section">
-        <div class="cta-1-bg" data-parallax='{"y": 30}' style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);"></div>
-        <div class="auto-container">
-            <div class="section_heading text-center">
-                <h2 class="section_heading_title_big">Ready to get started? <br> 2M+ businesses already joined</h2>
-            </div>
-            <div class="text-center">
-                <div class="cta-1-link-bt"><a href="index.html" class="btn-1">Start 14 Days Free Trial <span></span></a></div>
+    <!-- Cta Section Start-->
+  <section class="cta-section">
+    <div class="cta-1-bg" data-parallax='{"y": 30}'
+        style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background/cta-bg-image-one.png);">
+    </div>
+    <div class="auto-container">
+        <div class="section_heading text-center">
+            <h2 class="section_heading_title_big">Contact us today and discover how Appitae Solutions</br>
+            can help you achieve your business goals.</h2>
+        </div>
+        <div class="text-center">
+            <div class="cta-1-link-bt"><a href="<?php echo home_url(); ?>/contact-us" class="btn-1">Let’s innovate together!<span></span></a>
             </div>
         </div>
-    </section>
-    <!-- Cta Section End-->
+    </div>
+</section>
+<!-- Cta Section End-->
 
 </div>
 <?php get_footer(); ?>

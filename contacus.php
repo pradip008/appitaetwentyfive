@@ -98,7 +98,7 @@ get_header();
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                             <div class="link-box">
-                                <button type="submit" class="btn-large contact-us"><span>Post Comment</span></button>
+                                <button type="submit" class="btn-large contact-us"><span>Submit</span></button>
                             </div>
                         </div>
                     </div>
