@@ -296,7 +296,7 @@
 		width: 119px;
 	}
 	.banner-carousel .content-box .title-text{
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.banner-section.banner-style-four .content-box p{
 		font-size: 14px;
@@ -334,8 +334,9 @@
 		touch-action: pan-y; /* Allow vertical scrolling */
 	}
     .banner-carousel .content-box h2 {
-        font-size: 28px;
+        font-size: 32px;
         line-height: 39px;
+		margin-top:7px;
     }
 	.block_image_three {
         width: 128px;
@@ -362,7 +363,7 @@
 	}
 
 	.banner-carousel .slide-item .image-box {
-		padding-top: 50px;
+		padding-top: 20px;
 	}
 
 	.banner-carousel .image-box .image img{
@@ -522,6 +523,14 @@
 	.owl-carousel {
 		touch-action: pan-y; /* Allow vertical scrolling */
 	}
+	.about_left_content {
+    padding-top: 20px;
+}
+	.home-service-icon {
+    padding: 15px 16px 15px;
+}
+
+
 }
 
 

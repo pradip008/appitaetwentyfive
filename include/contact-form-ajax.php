@@ -8,11 +8,11 @@ function send_email_handler() {
 
     // Validate the data
     if (empty($username) || empty($email) || empty($message)) {
-        wp_send_json_error(['message' => 'All fields are required.']);
+        wp_send_json_error(['message' => 'All Fields are Required. Please Fill all Fields']);
     }
 
     // Prepare email details
-    $to = 'prajapatipradip1996@gmail.com'; // Replace with your email address
+    $to = 'sales@appitae.com'; // Replace with your email address
     $subject = 'Contact Form Submission';
     $body = "Name: $username\nEmail: $email\nMessage:\n$message";
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
@@ -26,5 +26,7 @@ function send_email_handler() {
 
     wp_die(); // Required to terminate the script properly
 }
+
 add_action('wp_ajax_send_email', 'send_email_handler');
 add_action('wp_ajax_nopriv_send_email', 'send_email_handler');
+

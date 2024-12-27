@@ -70,10 +70,10 @@ add_action( 'wp_enqueue_scripts', 'appitae_twentyfive_enqueue_styles' );
 
 
 function enqueue_custom_scripts() {
-  wp_enqueue_script('ajax-script', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js//ajax-script.js', ['jquery'], null, true);
+  wp_enqueue_script('ajax-script', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/ajax-script.js', ['jquery'], null, true);
 
   // Localize the script with the AJAX URL
-  wp_localize_script('ajax-script', 'ajaxurl', ['ajaxurl' => admin_url('admin-ajax.php')]);
+  wp_localize_script('ajax-script', 'ajaxurl', admin_url('admin-ajax.php'));
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
