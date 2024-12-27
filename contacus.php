@@ -49,7 +49,7 @@ get_header();
                         <div class="inner-box">
                             <div class="icon-box"><span class="icon-41"></span></div>
                             <h4>Call Us</h4>
-                            <div class="text">+1(888)1234-5678</div>
+                            <div class="text">' . esc_html($phone) . '</div>
                         </div>
                     </div></a>';           
                 }

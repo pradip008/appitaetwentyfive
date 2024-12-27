@@ -316,6 +316,32 @@
 		font-size: 38px !important;
 		line-height: 43px !important;
 	}
+	.about_chart_img {
+		padding-left: 0px;
+	}
+	.about_chart_img .top-image img {
+		height: 100%;
+		padding-bottom: 050px;
+	}
+	.about_reveniue_image img,
+	.about_realtime_image{
+		display: none;
+	}
+	.details-image-box img {
+		height: 290px !important;
+	}
+	.owl-carousel {
+		touch-action: pan-y; /* Allow vertical scrolling */
+	}
+    .banner-carousel .content-box h2 {
+        font-size: 28px;
+        line-height: 39px;
+    }
+	.block_image_three {
+        width: 128px;
+        right: 6px;
+        top: 16px;
+    }
 	
 }
 
@@ -493,7 +519,9 @@
 		font-size: 38px;
 		line-height: 38px;
 	}
-	
+	.owl-carousel {
+		touch-action: pan-y; /* Allow vertical scrolling */
+	}
 }
 
 
@@ -611,6 +639,9 @@
 		font-size: 38px;
 		line-height: 38px;
 	}
+	.owl-carousel {
+		touch-action: pan-y; /* Allow vertical scrolling */
+	}
 }
 
 	/* --------------------------------------------- */
@@ -682,6 +713,9 @@
 	.page-title h1{
 		font-size: 38px;
 		line-height: 38px;
+	}
+	.owl-carousel {
+		touch-action: pan-y; /* Allow vertical scrolling */
 	}
 }
 	
@@ -937,6 +971,9 @@
 	.page-title h1{
 		font-size: 38px;
 		line-height: 38px;
+	}
+	.owl-carousel {
+		touch-action: pan-y; /* Allow vertical scrolling */
 	}
 	
 }

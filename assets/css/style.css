@@ -716,7 +716,7 @@ img{
 }
 .contact-section {
     position: relative;
-    margin: 120px 0px 150px 0px;
+    margin: 50px 0px 100px 0px;
     z-index: 1;
 }
 .link-box .btn-large.contact-us {
@@ -971,9 +971,10 @@ img{
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
 }
-
 .owl-carousel {
 	-ms-touch-action: none;
 	touch-action: none;
 }
-
+.error {
+    color: red !important;
+}

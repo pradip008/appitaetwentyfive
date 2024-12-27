@@ -38,7 +38,7 @@ function appitae_twentyfive_enqueue_styles() {
   wp_enqueue_style( 'project-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/project.css', array(), '5.3.45' ,'all');
   wp_enqueue_style( 'responsive-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/responsive.css', array(), '5.3.45' ,'all');
   wp_enqueue_style( 'page-title-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/page-title.css', array(), '5.3.47' ,'all');
-  //wp_enqueue_style( 'team-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/team.css', array(), '5.3.48' ,'all');
+  wp_enqueue_style( 'team-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/css/module-css/team.css', array(), '5.3.48' ,'all');
   
   
   
@@ -52,6 +52,8 @@ function appitae_twentyfive_enqueue_styles() {
   wp_enqueue_script( 'validation-css', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/validation.js', array(), '1.4.0', true );
   //contact form js end
   }
+ 
+  //contact form js end
   wp_enqueue_script( 'appear-js', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js/appear.js', array(), '1.4.0', true );
   //porrtfolio
   if (is_single() || is_page_template('portfolio.php')) {
@@ -67,10 +69,22 @@ function appitae_twentyfive_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'appitae_twentyfive_enqueue_styles' );
 
 
+function enqueue_custom_scripts() {
+  wp_enqueue_script('ajax-script', APPITAE_TWENTYFIVE_THEME_DIRECTORY_URI . '/assets/js//ajax-script.js', ['jquery'], null, true);
+
+  // Localize the script with the AJAX URL
+  wp_localize_script('ajax-script', 'ajaxurl', ['ajaxurl' => admin_url('admin-ajax.php')]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/menus.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/customizer.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/custom-post-type.php';
 require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/disable-update.php';
+require_once APPITAE_TWENTYFIVE_THEME_DIRECTORY_PATH . '/include/contact-form-ajax.php';
+
 
 // Add theme support for various features
 function appitae_twentyfive_theme_setup() {

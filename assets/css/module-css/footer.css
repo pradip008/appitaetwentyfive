@@ -1,9 +1,7 @@
 /***
-
 ==================================================================
 	Main-Footer
 ==================================================================
-
 ***/
 .main-footer{
 	position: relative;
@@ -27,9 +25,6 @@
 	font-family: var(--text-font);
 	margin: 0px;
 }
-
-
-
 .main-footer a:hover{
 	color: var(--theme-color);
 }
@@ -74,7 +69,6 @@ p.company-copyright a:hover{
     -ms-transition: all 900ms ease;
     -o-transition: all 900ms ease;
 }
-
 .main-footer .social-links li a::before{
 	position: absolute;
     top: 0;
@@ -158,11 +152,9 @@ p.company-copyright a:hover{
 	border-radius: 0px;
 	transition: all 500ms ease;
 }
-  
 .main-footer .contact-widget .form-inner .form-group .nice-select .option{
 	color: #222;
 }
-  
 .nice-select:before{
 	position: absolute;
 	content: '\e92e';
@@ -172,12 +164,10 @@ p.company-copyright a:hover{
 	right: 20px;
 	color: rgba(255, 255, 255, 0.50);
 }
-  
   .main-footer .contact-widget .form-inner .form-group .theme-btn:before,
   .main-footer .contact-widget .form-inner .form-group .theme-btn:after{
 	background: #fff !important;
 }
-  
 .main-footer .pattern-layer .pattern-1{
 	position: absolute;
 	left: 0px;
@@ -186,7 +176,6 @@ p.company-copyright a:hover{
 	height: 540px;
 	background-repeat: no-repeat;
 }
-  
 .main-footer .pattern-layer .pattern-2{
 	position: absolute;
 	right: 0px;
@@ -195,20 +184,16 @@ p.company-copyright a:hover{
 	height: 550px;
 	background-repeat: no-repeat;
 }
-  
 .footer-bottom{
 	padding: 15px 0px;
 	background: linear-gradient(270deg, #002655 0%, #0162ff 100%);
 }
-  
 .footer-bottom p a{
 	color: #b4b4b4;
 }
-  
 .footer-bottom p a:hover{
 	text-decoration: underline;
 }
-
 .footer-widget.links-widget {
     padding-left: 50px;
 }
@@ -237,12 +222,9 @@ p.company-copyright a:hover{
     border-radius: 55px;
     background: linear-gradient(270deg, #CB38FF 0%, #682FFF 100%);
 }
-
-
 .main-footer .footer-logo a img {
     width: 225px;
 }
-
 ul.footer-contact li a i {
     padding: 11px;
     background: #ffffff80;
